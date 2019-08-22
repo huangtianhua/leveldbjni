@@ -34,14 +34,14 @@
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.fusesource.leveldbjni</groupId>
+    <groupId>com.github.huangtianhua</groupId>
     <artifactId>leveldbjni-project</artifactId>
-    <version>99-master-SNAPSHOT</version>
+    <version>1.9</version>
   </parent>
 
-  <groupId>org.fusesource.leveldbjni</groupId>
+  <groupId>com.github.huangtianhua</groupId>
   <artifactId>leveldbjni-all</artifactId>
-  <version>99-master-SNAPSHOT</version>
+  <version>1.9</version>
   <packaging>bundle</packaging>
   
   <name>${project.artifactId}</name>
@@ -49,9 +49,9 @@
       
   <dependencies>
     <dependency>
-      <groupId>org.fusesource.leveldbjni</groupId>
+      <groupId>com.github.huangtianhua</groupId>
       <artifactId>leveldbjni</artifactId>
-      <version>99-master-SNAPSHOT</version>
+      <version>1.9</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -85,9 +85,9 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.fusesource.leveldbjni</groupId>
+      <groupId>com.github.huangtianhua</groupId>
       <artifactId>leveldbjni-linux64-aarch64</artifactId>
-      <version>99-master-SNAPSHOT</version>
+      <version>1.9</version>
       <scope>provided</scope>
     </dependency>
 
@@ -111,13 +111,13 @@
             <Export-Package>
               org.fusesource.leveldbjni;version=${project.version},
               org.iq80.leveldb*;version=${leveldb-api-version},</Export-Package>
-            <Import-Package></Import-Package>
+            <Import-Package>com.github.huangtianhua.leveldbjni-linux64-aarch64</Import-Package>
             <DynamicImport-Package></DynamicImport-Package>
             <Private-Package>org.fusesource.hawtjni*,org.fusesource.leveldbjni.internal*,!*</Private-Package>
             <Implementation-Title>LevelDB JNI</Implementation-Title>
             <Implementation-Version>${project.version}</Implementation-Version>
             <Embed-Dependency>
-              *;groupId=org.fusesource.leveldbjni;inline=META-INF/native/*,
+              *;inline=META-INF/native/*,
             </Embed-Dependency>
             <Embed-Transitive>true</Embed-Transitive>
             <Bundle-NativeCode>
@@ -141,9 +141,9 @@
       
       <dependencies>
         <dependency>
-          <groupId>org.fusesource.leveldbjni</groupId>
+          <groupId>com.github.huangtianhua</groupId>
           <artifactId>leveldbjni</artifactId>
-          <version>99-master-SNAPSHOT</version>
+          <version>1.9</version>
           <classifier>sources</classifier>
           <optional>true</optional>
         </dependency>
